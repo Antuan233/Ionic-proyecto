@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Formulario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Regístrate</ion-card-title>
+        <ion-card-subtitle>Llena los campos para continuar</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input [(ngModel)]="nombre" placeholder="Escribe tu nombre"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Correo electrónico</ion-label>
+            <ion-input [(ngModel)]="email" placeholder="correo@ejemplo.com"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Contrasena</ion-label>
+            <ion-input [(ngModel)]="contrasena" placeholder="Escribe tu contraseña"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Número</ion-label>
+            <ion-input type="number" placeholder="Escriba su número telefónico"></ion-input>
+            <ion-text>
+              <p>¿No tiene cuenta?<a routerLink="/register">Regístrate</a></p>
+            </ion-text>
+          
+          </ion-item>
+
+          <ion-button expand="block" (click)="login()">Enviar</ion-button>
+
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
